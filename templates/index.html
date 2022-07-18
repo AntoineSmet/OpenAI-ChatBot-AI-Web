@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+  <title>AI</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='dall-e-2.jpg') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+<body>
+
+  <img src="{{ url_for('static', filename='manga.png') }}" class="icon" />
+
+  <form action="/" method="post">
+    <input type="text" name="human" placeholder="chat with me here"  />
+    <input type="submit" value="Send" />
+  </form>
+  {% if result %}
+  <div class="result"> <hr>{{ result }}</div>
+  {% endif %}
+
+ 
+
+
+
+</body>
